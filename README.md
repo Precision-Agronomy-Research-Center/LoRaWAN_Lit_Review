@@ -3,11 +3,6 @@
 (the structure of this repo and project management are based on
 [Rando et. al](https://greenelab.github.io/covid19-review/))
 
-[![HTML Manuscript]]
-[![PDF Manuscript]]
-[![DOI]]
-[![GitHub Actions Status]]
-
 Project Status:
 | Section | Title | Status Issue | Submission Status | Venue | Links |
 | -- | -- | -- | -- | -- | -- |
