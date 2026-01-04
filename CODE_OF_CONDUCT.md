@@ -2,57 +2,81 @@
 
 ## Our Values
 
-In this project, we seek to provide an environment for researchers from all backgrounds and disciplines to contribute to the consolidation and synthesis of scientific information related to COVID-19.
-Our project will be most successful when we create a space where a diverse group of people can collaboratively approach emerging information with curiosity and creativity.
-As a result, one of our primary goals is to make the online community associated with the repository welcoming to all members of the scientific community.
-Creativity thrives when people feel supported, accepted, and encouraged.
-As a result, inclusivity is one of the central tenents of this project.
+This project aims to provide a respectful, inclusive, and collaborative environment for contributors working on the systematic review **“LoRaWAN for Agriculture Decision Support.”**
+
+The success of this project depends on the participation of individuals from diverse backgrounds, including researchers, engineers, agronomists, extension specialists, farmers, data scientists, policymakers, and open-source practitioners. We believe that high-quality synthesis of technical and applied knowledge emerges when contributors are able to engage openly, critically, and constructively. We are committed to fostering a community where participants feel supported in sharing evidence, experiences, and perspectives, including lessons learned from real-world deployments. Inclusivity and professionalism are foundational to the integrity and impact of this review.
+
+---
 
 ## Our Pledge
 
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to make participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to make participation in this project and its community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+
+---
 
 ## Our Standards
 
-Examples of behavior that contributes to creating a positive environment include:
+Examples of behavior that contributes to a positive and productive environment include:
 
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community
-* Showing empathy towards other community members
+- Using respectful, inclusive, and professional language  
+- Being open to differing technical viewpoints and lived experiences  
+- Providing evidence-based and constructive feedback  
+- Accepting critique gracefully and engaging in good-faith discussion  
+- Focusing on improving the quality, clarity, and reproducibility of the review  
+- Showing consideration for contributors with different levels of access, resources, and infrastructure  
 
-Examples of unacceptable behavior by participants include:
+Examples of unacceptable behavior include:
 
-* The use of sexualized language or imagery and unwelcome sexual attention or advances
-* Trolling, insulting/derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or electronic address, without explicit permission
-* Other conduct which could reasonably be considered inappropriate in a professional setting
+- Harassment, intimidation, or discrimination in any form  
+- Personal, insulting, or derogatory comments  
+- Political or ideological attacks unrelated to the project’s scope  
+- Publishing private or identifying information without explicit permission  
+- Sustained disruption of discussion or deliberate misrepresentation of others’ contributions  
+- Any conduct that would reasonably be considered unprofessional in a collaborative research setting  
+
+---
 
 ## Our Responsibilities
 
-Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
+Project maintainers are responsible for clarifying and enforcing standards of acceptable behavior.
+They are expected to take appropriate, fair, and proportional action in response to any instances of unacceptable conduct.
 
-Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.
+Maintainers may remove, edit, or reject contributions, comments, issues, or pull requests that do not align with this Code of Conduct.
+They may also temporarily or permanently restrict participation when necessary to protect the community.
+
+---
 
 ## Scope
 
-This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community.
-Examples of representing a project or community include acting as an appointed representative at an online or offline event, such as for media coverage or for conferences or other presentations.
+This Code of Conduct applies to all project spaces, including but not limited to:
+
+- GitHub issues, pull requests, and discussions  
+- Manuscript contributions and review comments  
+- Project-related communication in public forums or events  
+
+It also applies when an individual is representing the project or its community in external contexts such as conferences, workshops, or publications.
+
+---
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at halie.rando@pennmedicine.upenn.edu or greenescientist@gmail.com. 
-All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. 
-The project team is obligated to maintain confidentiality with regard to the reporter of an incident. 
-Further details of specific enforcement policies may be posted separately.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project maintainers at:
 
-Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
-Only contributors in good standing with respect to the code of conduct will be offered the opportunity to review the approve the final manuscript, which is required for authorship through the ICMJE criteria.
+**avinash@parccommons.org**
+
+All reports will be reviewed promptly and handled with discretion.
+The maintainers are committed to maintaining confidentiality for reporters to the extent possible.
+Appropriate corrective action will be taken based on the nature and severity of the incident.
+
+Contributors who do not adhere to this Code of Conduct may be excluded from review, authorship consideration, or participation in future project activities.
+
+---
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), [version 1.4](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html).
+This Code of Conduct is adapted from the  
+[Contributor Covenant](https://www.contributor-covenant.org), version 1.4  
+https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
-For answers to common questions about this code of conduct, see https://www.contributor-covenant.org/faq
+For answers to common questions, see  
+https://www.contributor-covenant.org/faq
