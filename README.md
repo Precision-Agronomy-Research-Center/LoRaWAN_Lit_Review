@@ -6,74 +6,110 @@
 
 ## Project Status and Review Workflow
 
-Rather than predefining topical sections, this review is organized around a **coordinated, question-driven review process**. Manuscript sections are instantiated only after sufficient evidence has been collected, screened, and synthesized.
+This review follows a **standard systematic review workflow**, adapted for continuous, collaborative updating.  
+Manuscript sections are developed only after evidence has been identified, screened, and summarized.
 
-| Review Stage | Description | Status | Issue Tracker |
-|---|---|---|---|
-| Protocol Definition | Review questions, inclusion criteria, taxonomy design | ✔️ | Active |
-| Literature Acquisition | Search strategy, corpus expansion, citation tracking | ✔️ | Active |
-| Screening & Annotation | Relevance screening, metadata extraction, tagging | ⏳ | Ongoing |
-| Evidence Synthesis | Cross-study comparison, pattern identification | ⏳ | Planned |
-| Section Formation | Emergent section drafting based on synthesis | — | Planned |
-| Comparative & Gap Analysis | Cross-technology and cross-context comparison | — | Planned |
-| Living Updates | Continuous incorporation of new literature | — | Continuous |
+| Review Stage | Description | Status |
+|---|---|---|
+| Protocol Definition | Define research questions, search strategy, and inclusion criteria | ✔️ Active |
+| Literature Search | Execute database searches and identify candidate studies | ✔️ Active |
+| Screening | Apply inclusion and exclusion criteria | ⏳ Ongoing |
+| Data Extraction | Record key technical and application details from included studies | ⏳ Planned |
+| Synthesis | Summarize findings across studies | — Planned |
+| Writing | Draft manuscript sections based on synthesized results | — Planned |
+| Living Updates | Periodically incorporate new literature | — Ongoing |
 
-This project is **under active development** and **accepting contributions at all stages of the review lifecycle**.
+This project is **under active development** and **accepting contributions at all stages**.
 
 ---
 
-## Review Framework
+## Review Protocol
 
-This review follows a **systems-level evidence synthesis framework** designed to connect communication infrastructure characteristics to downstream agricultural decision quality.
+### Research Question
 
-### Unit of Analysis
-Each included study is treated as a **system instantiation**, characterized by:
-- Deployment context (crop, livestock, environment, scale)
-- Network configuration and constraints
-- Data flow from sensing to decision
-- Reported performance, failures, and tradeoffs
+This review addresses the following primary question:
 
-### Analytical Dimensions (Non-Prescriptive)
-Rather than fixed sections, studies are annotated along **orthogonal dimensions**, which later give rise to manuscript structure:
+> **How is LoRaWAN used in agricultural decision support systems, and what factors determine whether those systems effectively support decisions?**
 
-- **Physical constraints** (energy, range, duty cycle, reliability)
-- **Network design choices** (topology, gateways, backhaul)
-- **Sensing–decision coupling** (what decisions depend on what data)
-- **Operational context** (farm scale, labor, connectivity access)
-- **Failure modes** (packet loss, maintenance burden, misalignment with decisions)
-- **Comparative baselines** (cellular, NB-IoT, mesh, proprietary LPWANs)
+Secondary questions include:
+- What types of agricultural decisions are reported?
+- What technical constraints are commonly encountered?
+- How do reported deployments perform in practice?
+- How does LoRaWAN compare to alternative wireless technologies in agricultural settings?
 
-Manuscript sections are formed only once stable clusters emerge across these dimensions.
+---
+
+### Literature Search Strategy
+
+The literature search targets peer-reviewed and grey literature describing **LoRaWAN deployments in agriculture**.
+
+Sources include:
+- IEEE Xplore
+- ACM Digital Library
+- Scopus
+- Web of Science
+- Google Scholar
+- Selected reports and theses when peer-reviewed literature is limited
+
+Search terms include combinations of:
+- *LoRaWAN*, *LoRa*
+- *agriculture*, *farming*, *precision agriculture*
+- *decision support*, *monitoring*, *sensing*, *IoT*
+
+The exact search strings and dates are documented in the repository for transparency and reproducibility.
+
+---
+
+### Inclusion and Exclusion Criteria
+
+Studies are included if they:
+- Describe a LoRaWAN-based system applied to an agricultural context
+- Report on sensing, data collection, or system performance
+- Link sensing data to an agricultural monitoring or decision-support use case
+
+Studies are excluded if they:
+- Are purely theoretical with no agricultural application
+- Do not involve LoRa or LoRaWAN
+- Lack sufficient technical or application detail
+
+---
+
+### Data Extraction
+
+For each included study, the following information is recorded:
+- Agricultural context and use case
+- Sensors and data collected
+- Network configuration and scale
+- Reported performance (e.g., range, reliability, energy use)
+- Reported limitations, failures, or challenges
+- Comparison to other communication technologies (if provided)
+
+Extraction fields are standardized and documented in the repository.
+
+---
+
+### Synthesis Approach
+
+Findings are summarized by:
+- Aggregating reported use cases and decision types
+- Identifying common technical constraints and failure modes
+- Comparing reported performance across deployments
+- Highlighting recurring design choices and tradeoffs
+
+Manuscript sections are created **after** synthesis, based on what patterns emerge in the literature.
 
 ---
 
 ## Project Description
 
-The increasing deployment of low-cost sensing systems in agriculture has created a demand for wireless communication infrastructure that is reliable, energy-efficient, and scalable in rural and resource-constrained environments.
+The increasing deployment of low-cost sensing systems in agriculture has created a need for wireless communication infrastructure that is reliable, energy-efficient, and scalable in rural and resource-constrained environments.
 
-**LoRaWAN** has emerged as a widely adopted low-power wide-area networking (LPWAN) technology in this space. However, reported deployments vary widely in performance, architecture, and suitability for decision support.
+**LoRaWAN** has emerged as a widely used low-power wide-area networking (LPWAN) technology in this space. However, published deployments vary widely in design, performance, and usefulness for real agricultural decision-making.
 
-This repository hosts a **systematic, open, and continuously updated review** of how LoRaWAN is used within **agricultural decision support systems**, with emphasis on:
-
-- How sensing data is transformed into agronomic, environmental, or operational decisions  
-- Which technical and organizational constraints limit decision quality  
-- What design patterns recur across successful and failed deployments  
-
-The objective is not merely to catalog technologies, but to **extract actionable system-level insights** that inform future agricultural sensing and decision infrastructures.
-
----
-
-## Scope and Research Questions
-
-This review is guided by the following high-level questions, which drive screening, annotation, and synthesis:
-
-1. What agricultural decisions are actually supported by LoRaWAN-based sensing in practice?
-2. How do physical-layer and network-level constraints propagate to decision latency, reliability, and usefulness?
-3. Which design choices consistently succeed or fail across deployment contexts?
-4. Under what conditions does LoRaWAN outperform or underperform alternative wireless technologies?
-5. What unresolved challenges limit scalable, maintainable, and farmer-accessible deployments?
-
-These questions shape the review process; **they do not presuppose the final manuscript structure**.
+This repository hosts a **systematic, open, and continuously updated review** of LoRaWAN-based agricultural decision support systems, with the goal of clarifying:
+- What LoRaWAN is actually being used for in agriculture
+- Where it works well and where it does not
+- What practical constraints matter most for deployment and maintenance
 
 ---
 
@@ -81,11 +117,11 @@ These questions shape the review process; **they do not presuppose the final man
 
 We welcome contributions from researchers, engineers, extension specialists, farmers, and practitioners.
 
-Contributors may engage at any stage of the review process, including:
-- Identifying and adding relevant literature
-- Annotating deployments and extracting system metadata
-- Reporting real-world operational experiences and failures
-- Participating in synthesis and section formation
+Contributors may help by:
+- Adding or screening relevant literature
+- Extracting data from published studies
+- Reporting real-world deployment experiences
+- Assisting with synthesis and writing
 
 Authorship follows established community standards for systematic reviews and the  
 [ICMJE Guidelines](http://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html).
