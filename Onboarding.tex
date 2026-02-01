@@ -1,0 +1,290 @@
+% lorawan_review_recruitment_slides.tex
+% Build: pdflatex lorawan_review_recruitment_slides.tex
+% Notes: If you want speaker notes, compile with:
+%   pdflatex "\def\shownotes{1}\input{lorawan_review_recruitment_slides.tex}"
+
+\documentclass[aspectratio=169,11pt]{beamer}
+
+% -----------------------
+% Optional speaker notes
+% -----------------------
+\usepackage{pgfpages}
+\newif\ifshownotes
+\ifdefined\shownotes
+  \shownotestrue
+\else
+  \shownotesfalse
+\fi
+
+\ifshownotes
+  \setbeameroption{show notes on second screen=right}
+\else
+  \setbeameroption{hide notes}
+\fi
+
+% -----------------------
+% Minimal theme styling
+% -----------------------
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+% -----------------------
+% Metadata
+% -----------------------
+\title{How Is LoRaWAN Actually Used in Agriculture?}
+\subtitle{A living systematic review to connect deployments to decision support}
+\author{Avinash Baskaran}
+\institute{Collaborative review project (GitHub-based workflow)}
+\date{} % Leave blank
+
+% -----------------------
+% Convenience macros
+% -----------------------
+\newcommand{\tightlist}{\setlength{\itemsep}{4pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+
+% -----------------------
+% Title slide
+% -----------------------
+\begin{frame}
+  \titlepage
+  \note{
+  Hi everyone. In the next 20 minutes I want to recruit collaborators for a living systematic review.
+  The question is simple: how is LoRaWAN actually used in agricultural decision support, and when does it work in practice.
+  You do not need to be a LoRaWAN specialist to contribute.
+  }
+\end{frame}
+
+% -----------------------
+% Slide: Why now
+% -----------------------
+\begin{frame}{Why this matters now}
+\begin{itemize}\tightlist
+  \item LoRaWAN is widely proposed as the backbone for agricultural sensing
+  \item Papers often report network metrics without showing decision impact
+  \item Practitioners want to know: will this help me decide and act?
+\end{itemize}
+\note{
+LoRaWAN is everywhere in agriculture sensing proposals, but adoption does not equal understanding.
+A lot of work reports range, packets, RSSI, and battery life, but does not connect those to decisions like irrigation timing,
+disease response, livestock movement, or maintenance scheduling.
+The goal here is to make the evidence legible for system designers and practitioners.
+}
+\end{frame}
+
+% -----------------------
+% Slide: The gap
+% -----------------------
+\begin{frame}{The gap in the literature}
+\begin{itemize}\tightlist
+  \item Deployments are heterogeneous: scale, sensors, gateway layouts, backhaul
+  \item Performance is reported inconsistently across studies
+  \item Decision support is often asserted, not evaluated
+\end{itemize}
+\note{
+When you try to compare studies, you hit fragmentation fast.
+Some are simulations, some are single-farm pilots, some are multi-site networks.
+Metrics differ, reporting differs, and decision linkage is often missing.
+That makes it hard to answer practical questions like when LoRaWAN is the right choice.
+}
+\end{frame}
+
+% -----------------------
+% Slide: Existing reviews
+% -----------------------
+\begin{frame}{Why existing reviews do not resolve it}
+\begin{itemize}\tightlist
+  \item Many reviews organize by protocol layer or feature lists
+  \item Useful for capabilities, less useful for decision relevance
+  \item Missing: recurring failure modes and operational constraints
+\end{itemize}
+\note{
+Existing LPWAN or LoRaWAN reviews are valuable, but they often answer a different question.
+They summarize capabilities rather than connecting deployments to decision outcomes.
+We want to bring in operational realities: maintenance burden, gateway placement constraints,
+seasonality, interference, and what breaks over time.
+}
+\end{frame}
+
+% -----------------------
+% Slide: Core question
+% -----------------------
+\begin{frame}{Core research question}
+\begin{block}{Primary question}
+How is LoRaWAN used in agricultural decision support systems, and what factors determine whether it effectively supports decisions in practice?
+\end{block}
+
+\begin{itemize}\tightlist
+  \item What decisions are being supported, if any?
+  \item What constraints repeatedly limit usefulness?
+  \item When do alternatives outperform (cellular, NB-IoT, mesh)?
+\end{itemize}
+\note{
+This is a decision-centered review. Not a protocol benchmark paper.
+We want to understand what decisions are actually supported, where systems fail, and where alternatives make more sense.
+}
+\end{frame}
+
+% -----------------------
+% Slide: What we will produce
+% -----------------------
+\begin{frame}{What the review will produce}
+\begin{itemize}\tightlist
+  \item A reproducible corpus of LoRaWAN-in-agriculture deployments
+  \item A standardized extraction table of system details and reported outcomes
+  \item A synthesis of recurring patterns, constraints, and gaps
+  \item A living artifact that updates as new work appears
+\end{itemize}
+\note{
+We are building a shared dataset first, then writing follows.
+The output is not just a manuscript. It is also the extraction table and the evidence map that others can reuse.
+}
+\end{frame}
+
+% -----------------------
+% Slide: Workflow
+% -----------------------
+\begin{frame}{Workflow (simple and auditable)}
+\begin{enumerate}\tightlist
+  \item Define protocol: research question, sources, inclusion criteria
+  \item Run searches and add candidate papers
+  \item Screen titles and abstracts, then full text
+  \item Extract standardized fields into a shared table
+  \item Synthesize findings and draft sections
+  \item Periodically update with new literature
+\end{enumerate}
+\note{
+This is a standard systematic review loop.
+The difference is the collaboration and transparency: issues and pull requests, shared extraction, and regular updates.
+}
+\end{frame}
+
+% -----------------------
+% Slide: Inclusion criteria
+% -----------------------
+\begin{frame}{What we include (and exclude)}
+\begin{columns}[T,onlytextwidth]
+\column{0.5\textwidth}
+\textbf{Include}
+\begin{itemize}\tightlist
+  \item LoRa or LoRaWAN used in an agricultural context
+  \item Describes a system, deployment, or evaluation
+  \item Reports at least some technical or operational details
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{Exclude}
+\begin{itemize}\tightlist
+  \item Purely theoretical work with no ag application
+  \item Agriculture mentioned but LoRaWAN not actually used
+  \item Insufficient detail to extract basic system information
+\end{itemize}
+\end{columns}
+\note{
+We want evidence that can be compared across studies.
+If something is a conceptual proposal with no system details, it is usually out.
+Grey literature can be in if it provides deployment detail that peer reviewed work misses.
+}
+\end{frame}
+
+% -----------------------
+% Slide: Data extraction
+% -----------------------
+\begin{frame}{What we extract from each study}
+\begin{itemize}\tightlist
+  \item Context: crop, livestock, environment, geography, scale
+  \item System: sensors, sampling cadence, node power strategy
+  \item Network: gateways, backhaul, topology assumptions
+  \item Performance: reliability, range, latency proxies, battery life
+  \item Decision link: what action is supported, how often, by whom
+  \item Limitations: failures, constraints, maintenance burden
+\end{itemize}
+\note{
+This is the practical core.
+We will not require every field for every paper, but we will standardize what we try to capture.
+Decision link is important: what action is claimed, and is it evidenced or just asserted.
+}
+\end{frame}
+
+% -----------------------
+% Slide: Contribution paths
+% -----------------------
+\begin{frame}{How you can contribute (multiple paths)}
+\begin{itemize}\tightlist
+  \item \textbf{Add papers:} suggest studies or deployments we missed
+  \item \textbf{Screening:} help apply inclusion and exclusion criteria
+  \item \textbf{Extraction:} fill standardized fields for assigned papers
+  \item \textbf{Synthesis:} summarize clusters and draft text later
+  \item \textbf{Practice input:} share real deployment constraints and failures
+\end{itemize}
+\note{
+I want to emphasize: you do not need to write prose to contribute.
+Extraction and screening are valuable and are tracked for credit.
+Practitioner input is also welcome, especially failure modes that do not appear in papers.
+}
+\end{frame}
+
+% -----------------------
+% Slide: What you get
+% -----------------------
+\begin{frame}{What contributors get}
+\begin{itemize}\tightlist
+  \item Co-authorship and contributor credit aligned with community standards
+  \item A citable resource and a reusable extraction dataset
+  \item Clearer evidence for design choices and technology selection
+  \item A shared map of open problems and future research directions
+\end{itemize}
+\note{
+This is intended to be high utility for both academic and applied people.
+You gain a citable systematic review and a dataset you can reference in future work.
+}
+\end{frame}
+
+% -----------------------
+% Slide: Ask and next steps
+% -----------------------
+\begin{frame}{The ask (today)}
+\begin{itemize}\tightlist
+  \item If you have relevant papers, send them or open an issue
+  \item If you can screen or extract 3 to 5 papers, join the first sprint
+  \item If you have deployment experience, share constraints and failures
+\end{itemize}
+
+\vspace{6pt}
+\begin{block}{Contact}
+Email: \href{mailto:avinash@huminlabs.com}{avinash@huminlabs.com}
+\end{block}
+
+\note{
+Close with a concrete request: send papers, volunteer for a small extraction sprint, or share practical experience.
+Mention that you will provide a simple extraction template and assign small chunks to keep it lightweight.
+}
+\end{frame}
+
+% -----------------------
+% Slide: Q&A
+% -----------------------
+\begin{frame}{Questions}
+\begin{center}
+\vspace{12pt}
+{\Large Q\&A}
+\vspace{8pt}
+
+\small
+If helpful, I can share the protocol, search strings, and extraction template.
+\end{center}
+\note{
+Invite questions. If the audience wants detail, offer the protocol and extraction template as the concrete artifact.
+}
+\end{frame}
+
+\end{document}
