@@ -49,7 +49,7 @@ Sources include:
 - Scopus
 - Web of Science
 - Google Scholar
-- Selected reports and theses when peer-reviewed literature is limited
+- Selected reports and theses reflecting topics not well addressed in peer-reviewed literature
 
 Search terms include combinations of:
 - *LoRaWAN*, *LoRa*
