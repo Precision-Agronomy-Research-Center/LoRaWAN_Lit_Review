@@ -1,135 +1,190 @@
-# A Systematic Review of LoRaWAN for Agricultural Decision Support
+# A Systematic Review of LoRa/LoRaWAN Network Design and Performance in Agriculture
 
-*(This project adopts a living, collaborative review model based on Rando et al. and the Greene Lab COVID-19 Review.)*
+*(This project adopts a living, collaborative review model inspired by Rando et al. and the Greene Lab living review framework.)*
 
 ---
 
 ## Project Status and Review Workflow
 
-This review follows a **standard systematic review workflow**, adapted for continuous, collaborative updating.  
-Manuscript sections are developed only after evidence has been identified, screened, and summarized.
+This review follows a **technical systematic review workflow**, emphasizing measurable network and system-level performance in real agricultural deployments.
+
+Manuscript sections are developed only after empirical evidence has been identified, screened, and synthesized.
 
 | Review Stage | Description | Status |
-|---|---|---|
-| Protocol Definition | Define research questions, search strategy, and inclusion criteria | ✔️ Active |
+|--------------|------------|--------|
+| Protocol Definition | Define research questions, metrics, and search strategy | ✔️ Active |
 | Literature Search | Execute database searches and identify candidate studies | ✔️ Active |
 | Screening | Apply inclusion and exclusion criteria | ⏳ Ongoing |
-| Data Extraction | Record key technical and application details from included studies | ⏳ Planned |
-| Synthesis | Summarize findings across studies | — Planned |
+| Data Extraction | Record technical implementation and performance metrics | ⏳ Planned |
+| Quantitative Synthesis | Compare reported performance across deployments | — Planned |
 | Writing | Draft manuscript sections based on synthesized results | — Planned |
 | Living Updates | Periodically incorporate new literature | — Ongoing |
 
-This project is **under active development** and **accepting contributions at all stages**.
+This project is **under active development** and welcomes contributions.
 
 ---
 
 ## Review Protocol
 
-### Research Question
+### Primary Research Question
 
-This review addresses the following primary question:
+> **How are LoRa and LoRaWAN systems architected, implemented, and characterized in agricultural deployments, and what measurable network behaviors determine their scalability and reliability?**
 
-> **How is LoRaWAN used in agricultural decision support systems, and what factors determine whether those systems effectively support decisions?**
+### Secondary Questions
 
-Secondary questions include:
-- What types of agricultural decisions are reported?
-- What technical constraints are commonly encountered?
-- How do reported deployments perform in practice?
-- How does LoRaWAN compare to alternative wireless technologies in agricultural settings?
-
----
-
-### Literature Search Strategy
-
-The literature search targets peer-reviewed and grey literature describing **LoRaWAN deployments in agriculture**.
-
-Sources include:
-- IEEE Xplore
-- ACM Digital Library
-- Scopus
-- Web of Science
-- Google Scholar
-- Selected reports and theses reflecting topics not well addressed in peer-reviewed literature
-
-Search terms include combinations of:
-- *LoRaWAN*, *LoRa*
-- *agriculture*, *farming*, *precision agriculture*
-- *decision support*, *monitoring*, *sensing*, *IoT*
-
-The exact search strings and dates are documented in the repository for transparency and reproducibility.
+- How do spreading factor selection and ADR behavior affect field performance?
+- What packet delivery ratios (PDR) are reported under different agricultural conditions?
+- How does vegetation or canopy affect link budget and propagation?
+- How does collision behavior scale with node density?
+- What are the reported time-on-air and duty-cycle constraints in real deployments?
+- How is downlink latency managed for actuation systems?
+- How are gateway placement and topology decisions justified?
 
 ---
 
-### Inclusion and Exclusion Criteria
+## Literature Search Strategy
+
+The literature search targets peer-reviewed and grey literature describing **implemented LoRa/LoRaWAN systems in agricultural environments** with measurable performance characterization.
+
+### Sources
+
+- IEEE Xplore  
+- ACM Digital Library  
+- Scopus  
+- Web of Science  
+- Google Scholar  
+- Selected theses and technical reports  
+
+### Search Emphasis
+
+- LoRa / LoRaWAN  
+- Agricultural deployment contexts  
+- Network architecture and protocol behavior  
+- Measured metrics such as:
+  - Packet Delivery Ratio (PDR)
+  - Collision probability
+  - Link budget and propagation
+  - Spreading factor and ADR behavior
+  - Time-on-air
+  - Downlink latency
+  - Scalability
+
+All queries and search dates are documented in the repository for reproducibility.
+
+---
+
+## Inclusion and Exclusion Criteria
+
+### Inclusion Criteria
 
 Studies are included if they:
-- Describe a LoRaWAN-based system applied to an agricultural context
-- Report on sensing, data collection, or system performance
-- Link sensing data to an agricultural monitoring or decision-support use case
+
+- Describe an implemented LoRa or LoRaWAN system deployed in an agricultural context (field, greenhouse, livestock, pasture, soil, irrigation, etc.)
+- Report measurable network or system-level performance metrics (e.g., PDR, collision rate, latency, link budget, spreading factor distribution, time-on-air, scalability, propagation behavior)
+- Provide sufficient technical detail on architecture, topology, hardware configuration, or protocol parameters
+- Include experimental, prototype, testbed, or field validation
+
+### Exclusion Criteria
 
 Studies are excluded if they:
-- Are purely theoretical with no agricultural application
-- Do not involve LoRa or LoRaWAN
-- Lack sufficient technical or application detail
+
+- Are purely theoretical, simulation-only, or review papers without empirical agricultural deployment
+- Focus exclusively on application-layer outcomes (e.g., crop prediction models) without reporting network performance
+- Do not involve LoRa or LoRaWAN at the physical or network layer
+- Lack sufficient technical implementation detail to support design-level analysis
 
 ---
 
-### Data Extraction
+## Data Extraction
 
-For each included study, the following information is recorded:
-- Agricultural context and use case
-- Sensors and data collected
-- Network configuration and scale
-- Reported performance (e.g., range, reliability, energy use)
-- Reported limitations, failures, or challenges
-- Comparison to other communication technologies (if provided)
+For each included study, the following information is recorded.
 
-Extraction fields are standardized and documented in the repository.
+### Deployment Context
+- Agricultural setting (crop, livestock, irrigation, greenhouse, etc.)
+- Physical environment (open field, canopy, indoor barn, etc.)
+
+### Network Architecture
+- Topology (star, star-of-stars, multihop, mesh)
+- Gateway count and placement strategy
+- Node density
+
+### Protocol Parameters
+- Spreading factor distribution
+- ADR usage
+- MAC protocol (ALOHA, LBT, TDMA, etc.)
+- Device class (A/B/C)
+
+### Performance Metrics
+- Packet Delivery Ratio (PDR)
+- Collision behavior
+- Latency (uplink and downlink)
+- Link budget or RSSI/SNR measurements
+- Time-on-air
+- Duty-cycle constraints
+- Scalability limits
+- Propagation effects (foliage, canopy, terrain)
+
+### Validation Type
+- Field measurement
+- Prototype deployment
+- Testbed
+- Long-term monitoring
+
+Extraction templates are standardized and version-controlled within the repository.
 
 ---
 
-### Synthesis Approach
+## Synthesis Approach
 
-Findings are summarized by:
-- Aggregating reported use cases and decision types
-- Identifying common technical constraints and failure modes
-- Comparing reported performance across deployments
-- Highlighting recurring design choices and tradeoffs
+Findings are synthesized by:
 
-Manuscript sections are created **after** synthesis, based on what patterns emerge in the literature.
+- Comparing reported PDR across environments and densities
+- Mapping collision behavior to topology and MAC design
+- Relating spreading factor choices to reliability and scalability
+- Evaluating propagation effects under vegetation and terrain
+- Identifying common bottlenecks (duty cycle, ADR misconfiguration, gateway saturation)
+- Comparing architectural patterns across use cases
+
+Where possible, performance values will be aggregated and visualized to support cross-study comparison.
 
 ---
 
 ## Project Description
 
-The increasing deployment of low-cost sensing systems in agriculture has created a need for wireless communication infrastructure that is reliable, energy-efficient, and scalable in rural and resource-constrained environments.
+LoRaWAN has become one of the most widely deployed LPWAN technologies in agriculture. However, existing surveys primarily summarize application domains rather than systematically analyzing **how systems are engineered and how they perform under real agricultural constraints**.
 
-**LoRaWAN** has emerged as a widely used low-power wide-area networking (LPWAN) technology in this space. However, published deployments vary widely in design, performance, and usefulness for real agricultural decision-making.
+This project provides a structured, living review of:
 
-This repository hosts a **systematic, open, and continuously updated review** of LoRaWAN-based agricultural decision support systems, with the goal of clarifying:
-- What LoRaWAN is actually being used for in agriculture
-- Where it works well and where it does not
-- What practical constraints matter most for deployment and maintenance
+- Implemented LoRa/LoRaWAN agricultural systems  
+- Their network design decisions  
+- Their measurable performance characteristics  
+- Their scalability limits and architectural tradeoffs  
+
+The goal is to clarify:
+
+- What performance is realistically achievable  
+- What design choices matter most  
+- Where empirical gaps remain  
 
 ---
 
 ## Contributions
 
-We welcome contributions from researchers, engineers, extension specialists, farmers, and practitioners.
+We welcome contributions from:
+
+- Communications researchers  
+- Systems engineers  
+- Agricultural technologists  
+- Network architects  
+- Practitioners with field deployments  
 
 Contributors may help by:
-- Adding or screening relevant literature
-- Extracting data from published studies
-- Reporting real-world deployment experiences
-- Assisting with synthesis and writing
 
-Authorship follows established community standards for systematic reviews and the  
-[ICMJE Guidelines](http://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html).
+- Adding or screening relevant literature  
+- Extracting technical metrics  
+- Reporting real deployment measurements  
+- Assisting with quantitative synthesis  
 
-Contribution details are provided in [`CONTRIBUTING.md`](CONTRIBUTING.md).
+Authorship follows community standards and the ICMJE Guidelines.
 
----
-
-## Governance, Tooling, and Transparency
-
-*(Remaining sections: Code of Conduct, Pull Requests, Manubot, Repository Structure, License — unchanged.)*
+See `CONTRIBUTING.md` for details.
